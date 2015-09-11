@@ -1,3 +1,7 @@
+It is a fork of gcfg which allows underscore "_" to be part of identifier.
+
+--
+
 Gcfg reads INI-style configuration files into Go structs;
 supports user-defined types and subsections.
 
