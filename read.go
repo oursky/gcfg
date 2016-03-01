@@ -89,6 +89,12 @@ func readInto(config interface{}, fset *token.FileSet, file *token.File, src []b
 				if errs.Len() > 0 {
 					return errs.Err()
 				}
+			} else if tok == token.IDENT {
+				sectsub = lit
+				pos, tok, lit = s.Scan()
+				if errs.Len() > 0 {
+					return errs.Err()
+				}
 			}
 			if tok != token.RBRACK {
 				if sectsub == "" {
